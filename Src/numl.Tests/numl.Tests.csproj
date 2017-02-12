@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{92AD8C48-5312-4F34-9433-C02557E0686A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>numl.Tests</RootNamespace>
+    <AssemblyName>numl.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.19.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.0\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="AITests\Action.cs" />
+    <Compile Include="AITests\Square.cs" />
+    <Compile Include="AITests\SquareTests.cs" />
+    <Compile Include="AITests\TicTacToe.cs" />
+    <Compile Include="AITests\TicTacToeTests.cs" />
+    <Compile Include="Almost.cs" />
+    <Compile Include="DataTests\ComplexConversionTests.cs" />
+    <Compile Include="DataTests\DescriptorTests.cs" />
+    <Compile Include="DataTests\GraphTests.cs" />
+    <Compile Include="DataTests\LinAlgConversionTests.cs" />
+    <Compile Include="DataTests\SimpleConversionTests.cs" />
+    <Compile Include="Data\ArbitraryPrediction.cs" />
+    <Compile Include="Data\Descriptors.cs" />
+    <Compile Include="Data\Digit.cs" />
+    <Compile Include="Data\Fake.cs" />
+    <Compile Include="Data\Feed.cs" />
+    <Compile Include="Data\Generic.cs" />
+    <Compile Include="Data\House.cs" />
+    <Compile Include="Data\Iris.cs" />
+    <Compile Include="Data\Movie.cs" />
+    <Compile Include="Data\Student.cs" />
+    <Compile Include="Data\Tennis.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Data\ValueObject.cs" />
+    <Compile Include="MathTests\EvdTests.cs" />
+    <Compile Include="MathTests\HelperTests.cs" />
+    <Compile Include="MathTests\InformationTests.cs" />
+    <Compile Include="MathTests\LinkerTests.cs" />
+    <Compile Include="MathTests\MatrixTests.cs" />
+    <Compile Include="MathTests\MetricTests.cs" />
+    <Compile Include="MathTests\ProbabilityTests.cs" />
+    <Compile Include="MathTests\VectorTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReinforcementTests\MDPTests.cs" />
+    <Compile Include="ReinforcementTests\QLearnerTests.cs" />
+    <Compile Include="ScoringTests\ScoreTests.cs" />
+    <Compile Include="SerializationTests\BaseSerialization.cs" />
+    <Compile Include="SerializationTests\BasicSerialization\SerializerTests.cs" />
+    <Compile Include="SerializationTests\BasicSerialization\SimpleJsonTests.cs" />
+    <Compile Include="SerializationTests\DescriptorSerialization\DescriptorSerializationTests.cs" />
+    <Compile Include="SerializationTests\DescriptorSerialization\PropertySerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\DecisionTreeSerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\KernelPerceptronSerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\NaiveBayesSerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\NeuralNetworkSerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\RegressionSerializationTests.cs" />
+    <Compile Include="SerializationTests\SerializationEngineTests.cs" />
+    <Compile Include="SupervisedTests\AutoencoderTests.cs" />
+    <Compile Include="SupervisedTests\BaseSupervised.cs" />
+    <Compile Include="SupervisedTests\CofiRecommenderTests.cs" />
+    <Compile Include="SupervisedTests\DecisionTreeTests.cs" />
+    <Compile Include="SupervisedTests\KNNTests.cs" />
+    <Compile Include="SupervisedTests\LinearRegressionTests.cs" />
+    <Compile Include="SupervisedTests\LogisticRegressionTests.cs" />
+    <Compile Include="SupervisedTests\MultiClassLearnerTests.cs" />
+    <Compile Include="SupervisedTests\NaiveBayesTests.cs" />
+    <Compile Include="SupervisedTests\NeuralNetworkNodeTests.cs" />
+    <Compile Include="SupervisedTests\NeuralNetworkStructuralTests.cs" />
+    <Compile Include="SupervisedTests\NeuralNetworkTests.cs" />
+    <Compile Include="SupervisedTests\PerceptronTests.cs" />
+    <Compile Include="SupervisedTests\SVMTests.cs" />
+    <Compile Include="UnsupervisedTests\GMMTests.cs" />
+    <Compile Include="UnsupervisedTests\HierarchicalClusteringTests.cs" />
+    <Compile Include="UnsupervisedTests\KMeansTests.cs" />
+    <Compile Include="UnsupervisedTests\PCATests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Emails\Test_Data.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Emails\Test_Labels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Emails\Training_Data.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Emails\Training_Labels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\numl\numl.csproj">
+      <Project>{8AB90FF8-E82A-4F38-8B32-C07693DD289A}</Project>
+      <Name>numl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

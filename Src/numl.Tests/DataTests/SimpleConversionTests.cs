@@ -374,29 +374,6 @@ namespace numl.Tests.DataTests
         }
 
         [Fact]
-        public void Test_Vector_Expando_Conversion_Simple_Numbers()
-        {
-            Descriptor d = new Descriptor();
-            d.Features = new Property[]
-            {
-                new Property { Name = "Age", },
-                new Property { Name = "Height", },
-                new Property { Name = "Weight", },
-                new Property { Name = "Good", },
-            };
-
-            dynamic item = new ExpandoObject();
-            item.Age = 23;
-            item.Height = 6.21;
-            item.Weight = 220m;
-            item.Good = false;
-
-            var truths = new double[] { 23, 6.21, 220, -1 };
-            var actual = d.Convert(item);
-            Assert.Equal(truths, actual);
-        }
-
-        [Fact]
         public void Test_Vector_Conversion_Simple_Numbers_And_Strings()
         {
             Descriptor d = new Descriptor();
