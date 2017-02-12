@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using numl.AI;
 
-using numl.AI;
-
-namespace numl.Reinforcement
+namespace numl.Reinforcement.States
 {
     /// <summary>
     /// IMDPSuccessor interface.

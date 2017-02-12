@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using numl.AI;
+﻿using numl.AI;
 using numl.Math.LinearAlgebra;
 
-namespace numl.Reinforcement
+namespace numl.Reinforcement.States
 {
     /// <summary>
     /// IMDPState interface.

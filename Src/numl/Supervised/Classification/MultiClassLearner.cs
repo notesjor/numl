@@ -1,19 +1,13 @@
-﻿using numl.Math.LinearAlgebra;
-using numl.Math.Probability;
-using numl.Model;
-using numl.Supervised;
-using numl.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using numl.Supervised.Classification;
 using System.Threading.Tasks;
+using numl.Math.LinearAlgebra;
+using numl.Math.Probability;
+using numl.Model;
+using numl.Utils;
 
-using System.Threading;
-
-namespace numl
+namespace numl.Supervised.Classification
 {
     /// <summary>
     /// Primary class for running classification models. It is designed to abstract the separation of

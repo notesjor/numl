@@ -1,15 +1,9 @@
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.IO;
-using numl.Serialization;
+using numl.Math.Functions;
 using numl.Supervised.NeuralNetwork;
 using numl.Supervised.NeuralNetwork.Recurrent;
 using numl.Utils;
-using numl.Math.Functions;
 
-
-namespace numl.Serialization.Supervised.NeuralNetwork
+namespace numl.Serialization.Supervised.NeuralNetwork.Recurrent
 {
     /// <summary>
     /// Recurrent Node serializer.

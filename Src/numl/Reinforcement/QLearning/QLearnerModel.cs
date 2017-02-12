@@ -10,6 +10,7 @@ using numl.Math.Functions;
 using numl.Math.Discretization;
 using numl.Math.LinearAlgebra;
 using numl.Reinforcement.Functions;
+using numl.Reinforcement.States;
 
 namespace numl.Reinforcement.QLearning
 {

@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using numl.AI;
+using numl.Math;
 using numl.Math.Discretization;
 using numl.Math.LinearAlgebra;
-using numl.Utils;
-using numl.Math;
 
-namespace numl.Reinforcement
+namespace numl.Reinforcement.States
 {
     /// <summary>
     /// Converter class for generating Markov Decision Processes.

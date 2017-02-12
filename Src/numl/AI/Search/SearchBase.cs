@@ -1,8 +1,6 @@
 using System;
-using System.Linq;
-using System.Collections.Generic;
 
-namespace numl.AI
+namespace numl.AI.Search
 {
     /// <summary>
     /// Class Search.

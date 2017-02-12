@@ -8,6 +8,7 @@ using numl.AI;
 using numl.AI.Functions;
 using numl.Math.LinearAlgebra;
 using numl.Model;
+using numl.Reinforcement.States;
 using numl.Supervised;
 using numl.Utils;
 
