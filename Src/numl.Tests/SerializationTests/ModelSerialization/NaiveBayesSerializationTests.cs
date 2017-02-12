@@ -35,8 +35,8 @@ namespace numl.Tests.SerializationTests.ModelSerialization
 
             Serialize(model);
 
-            var lmodel = Deserialize<NaiveBayesModel>();
-            Assert.Equal(model.Root, lmodel.Root);
+      var lmodel = Deserialize<NaiveBayesModel>();
+      Assert.Equal(model.Root, lmodel.Root);
         }
     }
 }
