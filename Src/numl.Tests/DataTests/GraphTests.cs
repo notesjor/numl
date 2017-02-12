@@ -1,52 +1,9 @@
 ﻿using System.Linq;
-using numl.Data;
 using Xunit;
 
 namespace numl.Tests.DataTests
 {
-    public class Vertex : IVertex
-    {
-        static int _id = 0;
-        public static void Reset() => _id = 0;
-        public Vertex() { Id = ++_id; }
-        public int Id { get; set; }
-
-        public string Label { get; set; }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-        public override bool Equals(object obj)
-        {
-            if (obj is Vertex)
-                return ((Vertex)obj).Id == Id && ((Vertex)obj).Label == Label;
-            else
-                return false;
-        }
-    }
-
-    public class Edge : IEdge
-    {
-        public int ChildId { get; set; }
-
-        public int ParentId { get; set; }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
-        public override bool Equals(object obj)
-        {
-            if (obj is Edge)
-                return ((Edge)obj).ChildId == ChildId && ((Edge)obj).ParentId == ParentId;
-            else
-                return false;
-        }
-    }
-
-
-    [Trait("Category", "Data")]
+  [Trait("Category", "Data")]
     public class GraphTests
     {
         [Fact]

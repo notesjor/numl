@@ -46,10 +46,4 @@ namespace numl.Serialization.Supervised
             }
         }
     }
-
-    public class LinearKernelSerializer : JsonSerializer<LinearKernel> { }
-    public class LogisticKernelSerializer : JsonSerializer<LogisticKernel> { }
-    public class PolyKernelSerializer : JsonSerializer<PolyKernel> { }
-    public class RBFKernelSerializer : JsonSerializer<RBFKernel> { }
-
 }

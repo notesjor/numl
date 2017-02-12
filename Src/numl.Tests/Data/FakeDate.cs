@@ -1,7 +1,5 @@
 ﻿using System;
-using numl.Model;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace numl.Tests.Data
 {
@@ -29,48 +27,5 @@ namespace numl.Tests.Data
         public DateTime Date7 { get; set; }
         [DateFeature(DatePortion.Date | DatePortion.DateExtended)]
         public DateTime Date8 { get; set; }
-    }
-
-
-    public class FakeDateWithError
-    {
-        [DateFeature(DatePortion.Date)]
-        public int NotADate { get; set; }
-    }
-
-	public class FakeGuid
-	{
-		[GuidFeature]
-		public Guid Guid1 { get; set; }
-	}
-
-	public class FakeGuidWithError
-	{
-		[GuidFeature]
-		public int NotAGuid { get; set; }
-	}
-
-	public class FakeEnumerable
-    {
-        [EnumerableFeature(20)]
-        public IEnumerable<int> Numbers1 { get; set; }
-
-        [EnumerableFeature(5)]
-        public double[] Numbers2 { get; set; }
-
-        [EnumerableFeature(46)]
-        public List<char> Numbers3 { get; set; }
-    }
-
-    public class FakEnumerableWithError1
-    {
-        [EnumerableFeature(12)]
-        public int NotAnEnumerable { get; set; }
-    }
-
-    public class FakEnumerableWithError2
-    {
-        [EnumerableFeature(0)]
-        public List<char> Numbers3 { get; set; }
     }
 }

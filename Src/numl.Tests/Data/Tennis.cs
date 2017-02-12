@@ -1,31 +1,10 @@
 ﻿using System;
-using numl.Model;
 using System.Linq;
 using System.Collections.Generic;
 
 namespace numl.Tests.Data
 {
-    public enum Outlook
-    {
-        Sunny,
-        Overcast,
-        Rainy
-    }
-
-    public enum Temperature
-    {
-        Hot,
-        Mild,
-        Cool
-    }
-
-    public enum Humidity
-    {
-        High,
-        Normal
-    }
-
-    public class Tennis
+  public class Tennis
     {
         [Feature]
         public Outlook Outlook { get; set; }

@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using numl.Supervised;
-using numl.Supervised.Regression;
-using numl.Model;
 
 namespace numl.Tests.SerializationTests.ModelSerialization
 {
@@ -39,27 +36,6 @@ namespace numl.Tests.SerializationTests.ModelSerialization
             var loadedModel = Deserialize<LinearRegressionModel>();
 
             Assert.Equal(model.Theta, loadedModel.Theta);
-        }
-    }
-
-    public class ModelItem
-    {
-        [Feature]
-        public double LeftOperand { get; set; }
-        [Feature]
-        public double RightOperand { get; set; }
-        [Label]
-        public double Result { get; set; }
-    }
-
-    public static class RandomExtensions
-    {
-        public static double NextDouble(
-            this Random random,
-            double minValue,
-            double maxValue)
-        {
-            return random.NextDouble() * (maxValue - minValue) + minValue;
         }
     }
 }

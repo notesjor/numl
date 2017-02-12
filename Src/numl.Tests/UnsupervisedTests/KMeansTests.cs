@@ -1,31 +1,13 @@
 ﻿using System;
-using numl.Model;
 using System.Linq;
 using Xunit;
 using numl.Tests.Data;
-using numl.Unsupervised;
-using numl.Math.Metrics;
-using numl.Math.Probability;
-using numl.Math.LinearAlgebra;
 using System.Collections.Generic;
 
 
 namespace numl.Tests.UnsupervisedTests
 {
-    public class AB
-    {
-        [Feature]
-        public double A { get; set; }
-        [Feature]
-        public double B { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("[{0}, {1}]", A, B);
-        }
-    }
-
-    [Trait("Category", "Unsupervised")]
+  [Trait("Category", "Unsupervised")]
     public class KMeansTests
     {
         private static Matrix GenerateData(int size)

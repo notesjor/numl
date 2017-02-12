@@ -1,9 +1,7 @@
 ﻿using System;
-using numl.AI;
 using System.Linq;
 using System.Text;
 using System.Collections.Generic;
-using numl.Data;
 
 namespace numl.Tests.AITests
 {
@@ -115,19 +113,5 @@ namespace numl.Tests.AITests
                 if (i != _square[i]) problem++;
             return problem;
         }
-    }
-
-    public class SquareMove : ISuccessor
-    {
-
-        public SquareMove(IState state, IAction action)
-        {
-            State = state;
-            Action = action;
-        }
-
-        public double Cost { get { return 1; } }
-        public IAction Action { get; private set; }
-        public IState State { get; private set; }
     }
 }

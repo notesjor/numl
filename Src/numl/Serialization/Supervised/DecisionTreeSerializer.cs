@@ -42,6 +42,4 @@ namespace numl.Serialization.Supervised
             }
         }
     }
-    public class NodeSerializer : JsonSerializer<Node> { }
-    public class EdgeSerializer : JsonSerializer<Edge> { }
 }

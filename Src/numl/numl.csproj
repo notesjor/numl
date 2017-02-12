@@ -110,13 +110,9 @@
     <Compile Include="Math\LinearAlgebra\Evd.cs" />
     <Compile Include="Math\LinearAlgebra\Matrix.cs" />
     <Compile Include="Math\LinearAlgebra\MatrixExtensions.cs" />
-    <Compile Include="Math\LinearAlgebra\MatrixOps.cs" />
-    <Compile Include="Math\LinearAlgebra\MatrixStatics.cs" />
     <Compile Include="Math\LinearAlgebra\SingularMatrixException.cs" />
     <Compile Include="Math\LinearAlgebra\Vector.cs" />
     <Compile Include="Math\LinearAlgebra\VectorExtensions.cs" />
-    <Compile Include="Math\LinearAlgebra\VectorOps.cs" />
-    <Compile Include="Math\LinearAlgebra\VectorStatics.cs" />
     <Compile Include="Math\LinearAlgebra\VectorType.cs" />
     <Compile Include="Math\Linkers\AverageLinker.cs" />
     <Compile Include="Math\Linkers\CentroidLinker.cs" />

@@ -1,5 +1,4 @@
-﻿using numl.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace numl.Tests.Data
 {
-    public enum Gender
-    {
-        Male,
-        Female
-    }
-
-    public class User
+  public class User
     {
         public string Name { get; set; }
 
@@ -61,13 +54,5 @@ namespace numl.Tests.Data
                 } },
             };
         }
-    }
-
-    public class MovieRating
-    {
-        public int MovieId { get; set; }
-
-        [Feature]
-        public double Rating { get; set; }
     }
 }

@@ -1,18 +1,8 @@
 ﻿using System;
-using numl.Model;
 
 namespace numl.Tests.Data
 {
-	public enum Grade
-	{
-		A,
-		B,
-		C,
-		D,
-		F
-	}
-
-	public class Student
+  public class Student
 	{
         [StringFeature(SplitType=StringSplitType.Character)]
 		public string Name { get; set; }

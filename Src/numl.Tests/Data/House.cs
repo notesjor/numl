@@ -4,31 +4,10 @@
 */
 
 using System;
-using numl.Model;
 
 namespace numl.Tests.Data
 {
-	public enum District
-	{
-		Suburban,
-		Rural,
-		Urban
-	}
-
-	public enum HouseType
-	{
-		Detached,
-		SemiDetached,
-		Terrace
-	}
-
-	public enum Income
-	{
-		High,
-		Low
-	}
-
-	public class House
+  public class House
 	{
 		[Feature]
 		public District District { get; set; }
