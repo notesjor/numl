@@ -1,3 +1,5 @@
+using numl.Model;
+
 namespace numl.Tests.Data
 {
   public class FakeDateWithError

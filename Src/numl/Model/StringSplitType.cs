@@ -4,11 +4,12 @@ namespace numl.Model
   public enum StringSplitType
   {
     /// <summary>
-    /// Split string into corresponding characters
+    ///   Split string into corresponding characters
     /// </summary>
     Character,
+
     /// <summary>
-    /// Split string into corresponding words
+    ///   Split string into corresponding words
     /// </summary>
     Word
   }

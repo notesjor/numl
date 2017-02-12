@@ -1,4 +1,5 @@
 using System;
+using numl.Model;
 
 namespace numl.Tests.Data
 {

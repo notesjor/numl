@@ -44,6 +44,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
@@ -78,25 +79,45 @@
   <ItemGroup>
     <Compile Include="AITests\Action.cs" />
     <Compile Include="AITests\Square.cs" />
+    <Compile Include="AITests\SquareMove.cs" />
     <Compile Include="AITests\SquareTests.cs" />
     <Compile Include="AITests\TicTacToe.cs" />
+    <Compile Include="AITests\TicTacToeMove.cs" />
     <Compile Include="AITests\TicTacToeTests.cs" />
     <Compile Include="Almost.cs" />
     <Compile Include="DataTests\ComplexConversionTests.cs" />
     <Compile Include="DataTests\DescriptorTests.cs" />
+    <Compile Include="DataTests\Edge.cs" />
     <Compile Include="DataTests\GraphTests.cs" />
     <Compile Include="DataTests\LinAlgConversionTests.cs" />
     <Compile Include="DataTests\SimpleConversionTests.cs" />
+    <Compile Include="DataTests\Vertex.cs" />
     <Compile Include="Data\ArbitraryPrediction.cs" />
     <Compile Include="Data\Descriptors.cs" />
     <Compile Include="Data\Digit.cs" />
-    <Compile Include="Data\Fake.cs" />
+    <Compile Include="Data\District.cs" />
+    <Compile Include="Data\FakeDate.cs" />
+    <Compile Include="Data\FakeDateWithError.cs" />
+    <Compile Include="Data\FakeEnum.cs" />
+    <Compile Include="Data\FakeEnumerable.cs" />
+    <Compile Include="Data\FakeGuid.cs" />
+    <Compile Include="Data\FakeGuidWithError.cs" />
+    <Compile Include="Data\FakEnumerableWithError1.cs" />
+    <Compile Include="Data\FakEnumerableWithError2.cs" />
     <Compile Include="Data\Feed.cs" />
+    <Compile Include="Data\Gender.cs" />
     <Compile Include="Data\Generic.cs" />
+    <Compile Include="Data\Grade.cs" />
     <Compile Include="Data\House.cs" />
+    <Compile Include="Data\HouseType.cs" />
+    <Compile Include="Data\Humidity.cs" />
+    <Compile Include="Data\Income.cs" />
     <Compile Include="Data\Iris.cs" />
     <Compile Include="Data\Movie.cs" />
+    <Compile Include="Data\MovieRating.cs" />
+    <Compile Include="Data\Outlook.cs" />
     <Compile Include="Data\Student.cs" />
+    <Compile Include="Data\Temperature.cs" />
     <Compile Include="Data\Tennis.cs" />
     <Compile Include="Data\User.cs" />
     <Compile Include="Data\ValueObject.cs" />
@@ -119,8 +140,10 @@
     <Compile Include="SerializationTests\DescriptorSerialization\PropertySerializationTests.cs" />
     <Compile Include="SerializationTests\ModelSerialization\DecisionTreeSerializationTests.cs" />
     <Compile Include="SerializationTests\ModelSerialization\KernelPerceptronSerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\ModelItem.cs" />
     <Compile Include="SerializationTests\ModelSerialization\NaiveBayesSerializationTests.cs" />
     <Compile Include="SerializationTests\ModelSerialization\NeuralNetworkSerializationTests.cs" />
+    <Compile Include="SerializationTests\ModelSerialization\RandomExtensions.cs" />
     <Compile Include="SerializationTests\ModelSerialization\RegressionSerializationTests.cs" />
     <Compile Include="SerializationTests\SerializationEngineTests.cs" />
     <Compile Include="SupervisedTests\AutoencoderTests.cs" />
@@ -137,6 +160,7 @@
     <Compile Include="SupervisedTests\NeuralNetworkTests.cs" />
     <Compile Include="SupervisedTests\PerceptronTests.cs" />
     <Compile Include="SupervisedTests\SVMTests.cs" />
+    <Compile Include="UnsupervisedTests\AB.cs" />
     <Compile Include="UnsupervisedTests\GMMTests.cs" />
     <Compile Include="UnsupervisedTests\HierarchicalClusteringTests.cs" />
     <Compile Include="UnsupervisedTests\KMeansTests.cs" />

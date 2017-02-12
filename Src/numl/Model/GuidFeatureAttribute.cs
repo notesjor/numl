@@ -4,13 +4,9 @@ using System.Reflection;
 namespace numl.Model
 {
   /// <summary>Attribute for guid feature.</summary>
-  [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+  [AttributeUsage(AttributeTargets.Property)]
   public class GuidFeatureAttribute : FeatureAttribute
   {
-    /// <summary>Default constructor.</summary>
-    public GuidFeatureAttribute()
-    {
-    }
     /// <summary>Generates a property.</summary>
     /// <exception cref="InvalidOperationException">Thrown when the requested operation is invalid.</exception>
     /// <param name="property">The property.</param>
@@ -25,7 +21,7 @@ namespace numl.Model
         Name = property.Name,
         Discrete = true
       };
-			
+
       return gp;
     }
   }

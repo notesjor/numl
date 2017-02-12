@@ -1,3 +1,4 @@
+using numl.Model;
 using System.Collections.Generic;
 
 namespace numl.Tests.Data

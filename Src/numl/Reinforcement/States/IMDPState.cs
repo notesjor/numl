@@ -3,14 +3,14 @@ using numl.Math.LinearAlgebra;
 
 namespace numl.Reinforcement.States
 {
+  /// <summary>
+  ///   IMDPState interface.
+  /// </summary>
+  public interface IMDPState : IState
+  {
     /// <summary>
-    /// IMDPState interface.
+    ///   Gets or sets the feature collection.
     /// </summary>
-    public interface IMDPState : IState
-    {
-        /// <summary>
-        /// Gets or sets the feature collection.
-        /// </summary>
-        Vector Features { get; set; }
-    }
+    Vector Features { get; set; }
+  }
 }

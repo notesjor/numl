@@ -4,23 +4,20 @@ using System.Reflection;
 namespace numl.Model
 {
   /// <summary>Attribute for date feature.</summary>
-  [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+  [AttributeUsage(AttributeTargets.Property)]
   public class DateFeatureAttribute : FeatureAttribute
   {
     /// <summary>The dp.</summary>
-    DateTimeProperty dp;
+    private readonly DateTimeProperty dp;
+
     /// <summary>Constructor.</summary>
     /// <param name="features">The features.</param>
-    public DateFeatureAttribute(DateTimeFeature features)
-    {
-      dp = new DateTimeProperty(features);
-    }
+    public DateFeatureAttribute(DateTimeFeature features) { dp = new DateTimeProperty(features); }
+
     /// <summary>Constructor.</summary>
     /// <param name="portion">The portion.</param>
-    public DateFeatureAttribute(DatePortion portion)
-    {
-      dp = new DateTimeProperty(portion);
-    }
+    public DateFeatureAttribute(DatePortion portion) { dp = new DateTimeProperty(portion); }
+
     /// <summary>Generates a property.</summary>
     /// <exception cref="InvalidOperationException">Thrown when the requested operation is invalid.</exception>
     /// <param name="property">The property.</param>

@@ -1,41 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace numl.Tests.SerializationTests.ModelSerialization
 {
-    [Trait("Category", "Serialization")]
-    public class RegressionSerializationTests : BaseSerialization
+  [Trait("Category", "Serialization")]
+  public class RegressionSerializationTests : BaseSerialization
+  {
+    [Fact]
+    public void Linear_Regression_Save_And_Load()
     {
-        [Fact]
-        public void Linear_Regression_Save_And_Load()
-        {
-            var rnd = new Random();
-            Func<double, double, double> func = (l, r) => l + 2 * r;
+      var rnd = new Random();
+      Func<double, double, double> func = (l, r) => l + 2 * r;
 
-            LinearRegressionModel model;
+      LinearRegressionModel model;
 
-            var data = new List<ModelItem>();
-            for (var i = 0; i < 100; i++)
-            {
-                var left = rnd.NextDouble(0, 50000);
-                var right = rnd.NextDouble(0, 50000);
-                var result = func(left, right);
-                data.Add(new ModelItem { LeftOperand = left, RightOperand = right, Result = result });
-            }
-            var d = Descriptor.Create<ModelItem>();
-            var g = new LinearRegressionGenerator { Descriptor = d };
-            var learningModel = Learner.Learn(data, .80, 5, g); // changed from 1000
-            model = (LinearRegressionModel)learningModel.Model;
+      var data = new List<ModelItem>();
+      for (var i = 0; i < 100; i++)
+      {
+        var left = rnd.NextDouble(0, 50000);
+        var right = rnd.NextDouble(0, 50000);
+        var result = func(left, right);
+        data.Add(new ModelItem {LeftOperand = left, RightOperand = right, Result = result});
+      }
+      var d = Descriptor.Create<ModelItem>();
+      var g = new LinearRegressionGenerator {Descriptor = d};
+      var learningModel = Learner.Learn(data, .80, 5, g); // changed from 1000
+      model = (LinearRegressionModel) learningModel.Model;
 
-            Serialize(model);
+      Serialize(model);
 
-            var loadedModel = Deserialize<LinearRegressionModel>();
+      var loadedModel = Deserialize<LinearRegressionModel>();
 
-            Assert.Equal(model.Theta, loadedModel.Theta);
-        }
+      Assert.Equal(model.Theta, loadedModel.Theta);
     }
+  }
 }

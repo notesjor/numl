@@ -1,43 +1,33 @@
 ﻿using System;
-using numl.Model;
 using System.Linq;
-using System.Reflection;
-
+using numl.Model;
 
 namespace numl.Serialization.Model
 {
-    public class DateTimePropertySerializer : PropertySerializer
+  public class DateTimePropertySerializer : PropertySerializer
+  {
+    public override bool CanConvert(Type type) { return typeof(DateTimeProperty).IsAssignableFrom(type); }
+
+    public override object Create() { return new DateTimeProperty(); }
+
+    public override object Read(JsonReader reader)
     {
-        
-        public override bool CanConvert(Type type)
-        {
-            return typeof(DateTimeProperty).IsAssignableFrom(type);
-        }
+      var p = (DateTimeProperty) base.Read(reader);
 
-        public override object Create()
-        {
-            return new DateTimeProperty();
-        }
+      var features = reader.ReadArrayProperty().Value
+                           .Select(o => (string) o)
+                           .ToArray();
 
-        public override object Read(JsonReader reader)
-        {
-            var p = (DateTimeProperty)base.Read(reader);
+      p.Features = DateTimeProperty.GetFeatures(features);
 
-            var features = reader.ReadArrayProperty().Value
-                            .Select(o => (string)o)
-                            .ToArray();
-
-            p.Features = DateTimeProperty.GetFeatures(features);
-
-            return p;
-        }
-
-        public override void Write(JsonWriter writer, object value)
-        {
-            base.Write(writer, value);
-            var p = (DateTimeProperty)value;
-            writer.WriteFirstArrayProperty("Features", DateTimeProperty.GetColumns(p.Features));
-        }
-        
+      return p;
     }
+
+    public override void Write(JsonWriter writer, object value)
+    {
+      base.Write(writer, value);
+      var p = (DateTimeProperty) value;
+      writer.WriteFirstArrayProperty("Features", DateTimeProperty.GetColumns(p.Features));
+    }
+  }
 }

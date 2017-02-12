@@ -13,12 +13,15 @@ namespace numl.Supervised
       Message = message;
       Model = model;
     }
-    /// <summary>Gets or sets the model.</summary>
-    /// <value>The model.</value>
-    public IModel Model { get; private set; }
+
     /// <summary>Gets or sets the message.</summary>
     /// <value>The message.</value>
     public string Message { get; private set; }
+
+    /// <summary>Gets or sets the model.</summary>
+    /// <value>The model.</value>
+    public IModel Model { get; private set; }
+
     /// <summary>Makes.</summary>
     /// <param name="model">The model.</param>
     /// <param name="message">(Optional) the message.</param>
